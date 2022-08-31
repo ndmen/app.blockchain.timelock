@@ -18,4 +18,12 @@ contract TimeLock {
         bytes data,
         uint timestamp
     );
+    event Execute(
+        bytes32 indexed txId,
+        address indexed target,
+        uint value,
+        string func,
+        bytes data,
+        uint timestamp
+    );
 }
