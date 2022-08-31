@@ -9,4 +9,13 @@ contract TimeLock {
     error TimestampNotPassedError(uint blockTimestmap, uint timestamp);
     error TimestampExpiredError(uint blockTimestamp, uint expiresAt);
     error TxFailedError();
+    
+    event Queue(
+        bytes32 indexed txId,
+        address indexed target,
+        uint value,
+        string func,
+        bytes data,
+        uint timestamp
+    );
 }
