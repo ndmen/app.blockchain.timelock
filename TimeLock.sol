@@ -26,4 +26,5 @@ contract TimeLock {
         bytes data,
         uint timestamp
     );
+    event Cancel(bytes32 indexed txId);
 }
