@@ -27,4 +27,8 @@ contract TimeLock {
         uint timestamp
     );
     event Cancel(bytes32 indexed txId);
+    
+    uint public constant MIN_DELAY = 10; // seconds
+    uint public constant MAX_DELAY = 1000; // seconds
+    uint public constant GRACE_PERIOD = 1000; // seconds
 }
