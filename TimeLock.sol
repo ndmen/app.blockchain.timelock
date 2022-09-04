@@ -35,4 +35,8 @@ contract TimeLock {
     address public owner;
     // tx id => queued
     mapping(bytes32 => bool) public queued;
+    
+    constructor() {
+        owner = msg.sender;
+    }
 }
