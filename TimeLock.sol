@@ -31,4 +31,8 @@ contract TimeLock {
     uint public constant MIN_DELAY = 10; // seconds
     uint public constant MAX_DELAY = 1000; // seconds
     uint public constant GRACE_PERIOD = 1000; // seconds
+    
+    address public owner;
+    // tx id => queued
+    mapping(bytes32 => bool) public queued;
 }
